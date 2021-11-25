@@ -13,6 +13,7 @@ $border: .2rem solid $black;
   padding: 0;
   outline: none;
   border: 0;
+  background: none;
   text-decoration: none;
   text-transform: capitalize;
   list-style: none;
@@ -24,13 +25,11 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
+}
 
-  @media (max-width: 991px) {
-    font-size: 55%;
-  }
-
-  @media (max-width: 450px) {
-    font-size: 50%;
+body {
+  &._lock {
+    overflow: hidden;
   }
 }
 
@@ -65,26 +64,10 @@ html {
   align-items: center;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
   padding: 2rem 9%;
-
-  &__btn {
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    padding: 2rem;
-  }
+  background: $white;
 }
 
 .menu {
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    margin: 0 1rem;
-  }
 
   &__link {
     font-size: 2rem;
@@ -100,3 +83,11 @@ html {
   font-size: 2.5rem;
   color: $black;
 }
+
+#menu__btn {
+  font-size: 3rem;
+  color: $black;
+  display: none;
+}
+
+@import "media-q.scss";
