@@ -1,0 +1,45 @@
+.page__home {}
+
+.home {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  background: $pink;
+}
+
+.home__image {
+  flex: 1 1 42rem;
+
+  img {
+    width: 100%;
+    animation: flying 4s linear infinite;
+  }
+}
+
+.home__content {
+  flex: 1 1 42rem;
+
+  &>*:not(:last-child) {
+    margin: 0px 0px 1rem 0px;
+  }
+}
+
+.home__title {
+  font-size: 6rem;
+  font-weight: bolder;
+}
+
+.home__text {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.title {}
+
+.line-down {}
+
+
+.home__btn {}

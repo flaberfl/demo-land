@@ -27,10 +27,19 @@ html {
   scroll-padding-top: 7rem;
 }
 
-body {
-  &._lock {
-    overflow: hidden;
-  }
+// body {
+//   &._lock {
+//     overflow: hidden;
+//     position: fixed;
+//   }
+// }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
@@ -54,7 +63,7 @@ body {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -66,6 +75,7 @@ body {
   padding: 2rem 9%;
   background: $white;
 }
+
 
 .menu {
 
@@ -90,4 +100,23 @@ body {
   display: none;
 }
 
-@import "media-q.scss";
+@keyframes flying {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -4rem);
+  }
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+
+
+@import "blocks/home.scss";
+@import "blocks/media-q.scss";
